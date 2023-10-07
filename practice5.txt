@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 This is file for practice5.
-=======
-This is file for practice5.
->>>>>>> develop
