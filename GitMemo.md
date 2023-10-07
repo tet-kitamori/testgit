@@ -102,3 +102,36 @@ GitHubのメインページに移動し、settingを選択
 - Titleには適当な名前
 - Keyには、id_rsa.pubの中身をコピーペーストで貼り付ける
 
+## ２．Gitの操作
+
+### 2.1 ファイルのステージング
+
+$git add **filename** または $git add .
+
+### 2.2 ファイルのコミット
+
+$git commit または $git commit -m "**commit message**"
+
+### 2.3 ブランチ名の変更
+
+$git branch -m main
+
+### 2.4 リモートリポジトリの登録
+
+リモートブランチにGitHubで作成したリポジトリを登録する
+
+$git remote add origin git@GitHub.com:**username**/リポジトリ名.git
+
+### 2.5 ローカルリポジトリのコミットをリモートリポジトリに反映
+
+$git push origin main
+
+毎回pushするたびにリポジトリ名やブランチ名を指定するのは面倒
+
+→　ローカルリポジトリの上流ブランチを登録
+
+$git push -u origin main  (-u は　--set-upstream の略)
+
+そのあとは、
+
+$git push
