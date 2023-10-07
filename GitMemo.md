@@ -146,7 +146,9 @@ $ git clone **リポジトリのURL**
 
 １．現在のブランチを確認する
 
-$ git branch
+- ローカルブランチの確認　$ git branch
+- リモートブランチの確認　$ git branch -r
+- リモートとローカルの両方を確認 $ git branch -a
 
 ２．ブランチを作成する
 
@@ -173,4 +175,18 @@ $ git diff
 ステージングされていないファイルとの差分を確認する
 
 $ git diff --cached
+
+### 2.9 コンフリクトを解消
+
+別のブランチをmainのブランチにマージするときに同名のファイルの内容が異なればコンフリクト
+
+$ git merge develop
+
+マージ済みブランチを削除する
+
+$ git branch -d **branch-name**
+
+マージしていないブランチを削除する
+
+$ git branch -D **branch-name**
 
