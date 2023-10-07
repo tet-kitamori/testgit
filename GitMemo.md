@@ -78,3 +78,27 @@ C:/Program Files/Git/etc/gitconfigに格納
 
 `$ git config --global --remove-section user`
 
+### 1.4 SSHでGitHubにアクセスするための設定
+
+### SSH鍵を作成し登録する
+
+１．すでに鍵があるか確認
+
+$ls ~/.ssh
+
+２．なければ、鍵を作成する
+
+$ssh-keygen -C "**my_email@address**"
+
+鍵の生成が成功していれば、~/.sshフォルダに id_rsa, id_rsa.pubの
+ふたつのファイルができる。
+
+３．GitHubに公開鍵を登録する
+
+GitHubのメインページに移動し、settingを選択
+
+→　SSH and GPG keys を選択　→　new SSH key ボタンを押下
+
+- Titleには適当な名前
+- Keyには、id_rsa.pubの中身をコピーペーストで貼り付ける
+
