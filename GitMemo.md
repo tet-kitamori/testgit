@@ -29,7 +29,7 @@ C:/Users/**username**/.gitconfig
 
 C:/Program Files/Git/etc/gitconfigに格納
 
-`$git config --system -l`
+`$ git config --system -l`
 
 - diff.astextplain.textconv=astextplain
 - filter.lfs.clean=git-lfs clean -- %f
@@ -50,7 +50,7 @@ C:/Program Files/Git/etc/gitconfigに格納
 
 .git/configに格納 ※リポジトリのフォルダ直下に隠しフォルダ.gitが存在している
 
-`$git config --local -l`
+`$ git config --local -l`
 
 ### すべての設定の設定範囲を表示
 
@@ -84,11 +84,11 @@ C:/Program Files/Git/etc/gitconfigに格納
 
 １．すでに鍵があるか確認
 
-$ls ~/.ssh
+$ ls ~/.ssh
 
 ２．なければ、鍵を作成する
 
-$ssh-keygen -C "**my_email@address**"
+$ ssh-keygen -C "**my_email@address**"
 
 鍵の生成が成功していれば、~/.sshフォルダに id_rsa, id_rsa.pubの
 ふたつのファイルができる。
@@ -106,32 +106,57 @@ GitHubのメインページに移動し、settingを選択
 
 ### 2.1 ファイルのステージング
 
-$git add **filename** または $git add .
+$ git add **filename** または $git add .
 
 ### 2.2 ファイルのコミット
 
-$git commit または $git commit -m "**commit message**"
+$ git commit または $ git commit -m "**commit message**"
 
 ### 2.3 ブランチ名の変更
 
-$git branch -m main
+$ git branch -m main
 
 ### 2.4 リモートリポジトリの登録
 
 リモートブランチにGitHubで作成したリポジトリを登録する
 
-$git remote add origin git@GitHub.com:**username**/リポジトリ名.git
+$ git remote add origin git@GitHub.com:**username**/リポジトリ名.git
 
 ### 2.5 ローカルリポジトリのコミットをリモートリポジトリに反映
 
-$git push origin main
+$ git push origin main
 
 毎回pushするたびにリポジトリ名やブランチ名を指定するのは面倒
 
 →　ローカルリポジトリの上流ブランチを登録
 
-$git push -u origin main  (-u は　--set-upstream の略)
+$ git push -u origin main  (-u は　--set-upstream の略)
 
 そのあとは、
 
-$git push
+$ git push
+
+### 2.6 リモートリポジトリをクローンして取得する
+
+GitHubからリポジトリを取得する
+
+$ git clone **リポジトリのURL**
+
+### 2.7 ブランチの操作
+
+１．現在のブランチを確認する
+
+$ git branch
+
+２．ブランチを作成する
+
+$ git branch **branch-name**
+
+３．ブランチを移動する
+
+$ git switch **branch-name**
+
+４．ブランチ作成と移動を１コマンドで行う
+
+$ git switch -C **branch-name**
+
