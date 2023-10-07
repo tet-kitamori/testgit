@@ -1,1 +1,2 @@
 This is the third sample text file for Git practice.
+Add change a bit.

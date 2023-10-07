@@ -160,3 +160,17 @@ $ git switch **branch-name**
 
 $ git switch -C **branch-name**
 
+### 2.8 ブランチの理解を深める
+
+追跡されていないファイルを確認する
+
+$ git status
+
+追跡されていないファイルの差分を確認する
+
+$ git diff 
+
+ステージングされていないファイルとの差分を確認する
+
+$ git diff --cached
+
